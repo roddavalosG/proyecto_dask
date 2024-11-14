@@ -1,0 +1,6 @@
+dask[complete]
+numpy
+pandas
+matplotlib
+jupyterlab
+notebook
