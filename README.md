@@ -8,21 +8,33 @@ Este es el proyecto de Dask para la materia de Fuentes de Datos ITAM Otoño 2024
 - Pablo García
 
 ## Instrucciones para correr el proyecto
-Recomendamos que realices este proceso con tiempo (no más de 10 minutos), ya que el repositorio es algo pesado y el Docker se tarda en construir.
+Recomendamos que realices este proceso con tiempo (no más de 10 minutos), ya que el repositorio es algo pesado y el Docker se tarda en construir. 
+
+### Hacer un Fork del repositorio
+En el GitHub del proyecto, haz click en el botón de **Fork** que se encuentra por la esquina superior derecha (esto es necesario para que puedan subir su tarea). A partir de aquí, elige un nombre (recomendamos que sea *proyecto_dask*) y selecciona la opción de copiar solamente la rama `master/main`. Así, tendrás un fork de nuestro repositorio en tu GitHub, el cual podrás clonar y desde el cuál podrás hacer el pull request para la tarea.
 
 ### Clonar el repositorio desde GitHub
-Accede a una carpeta donde desees guardar el proyecto y clona el repositorio con:
+Accede a una carpeta donde desees guardar el proyecto y clona el repositorio de tu fork con:
 ```bash
-git clone git@github.com:Andresaf03/proyecto_dask.git
+git clone git@github.com:tu_usuario/proyecto_dask.git
 ```
+Sustituye, si decidiste usar otro nombre para el repositorio, en *proyecto_dask* tanto arriba como abajo.
+
 Ahora accede a la carpeta con: 
 ```bash
 cd proyecto_dask
 ```
 
+Igualmente, para la tarea, por si se modifica algo, recomendamos que configures el upstream. Estando dentro de la carpeta en el repositorio de tu fork (paso anterior), puedes hacerlo con:
+```bash
+git remote add upstream git@github.com:Andresaf03/proyecto_dask.git
+```
+
 ### Configurar el entorno de Docker
+Si vas a seguir el proyecto de manera local (no recomendamos) y no quieres construir el Docker, es necesario que construyas el ambiente virtual (`.venv`) desde tu editor de código. En VS Code simplemente pulsa `CONTROL + SHIFT + P` -> `>Create Environment` -> `Venv` -> Seleccionar tu intérpete de python -> seleccionar la casilla de `requirements.txt` -> `ENTER`. De esta forma se creará un ambiente virtual local con las dependencias necesarias para seguir el proyecto, puedes saltarte este paso y verás el proyecto dentro de la carpeta `/notebooks`. En otro caso, sige las instrucciones a continuación:
+
 1. Reconstruye las imágenes de Docker
-    - Asegúrate de que Docker esté instalado y en ejecución. Luego, ejecuta: 
+    - Asegúrate de que Docker esté instalado y en ejecución. Colócate en la carpeta *proyecto_dask*. 
     - Luego ejecuta:
     ```bash
         docker-compose build
@@ -64,3 +76,6 @@ proyecto_dask/
 ├── Dockerfile          # Imagen Docker personalizada
 └── README.md           # Documentación del proyecto
 ```
+
+## Tarea
+Para la tarea, es necesario que consultes el archivo `06_tarea_dask.ipynb`. Dentro de este se encuentran todas las instrucciones de la tarea. Una vez realizado el 'fork' y clonado el repositorio, crea una rama en tu fork y agrega una carpeta con tu clave única en la carpeta de tareas. Copia el archivo `06_tarea_dask.ipynb` de la carpeta de notebooks y agrégalo a tu carpeta. Resuelve la tarea (dentro de tu carpeta) y haz pull request al main de nuestro repositorio (desde tu main). Este es el mismo procedimiento que hemos seguido en la clase de Fuentes de Datos.
