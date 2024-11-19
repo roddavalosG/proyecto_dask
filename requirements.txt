@@ -8,3 +8,4 @@ mimesis
 graphviz
 distributed
 polars
+dask-labextension
