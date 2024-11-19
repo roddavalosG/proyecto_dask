@@ -11,4 +11,4 @@ data/.DS_Store
 dask-expr.svg
 mydask.png
 
-notebooks/ipynb_checkpoints/*
+/notebooks/.ipynb_checkpoints

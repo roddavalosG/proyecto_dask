@@ -6,3 +6,5 @@ jupyterlab
 notebook
 mimesis
 graphviz
+distributed
+polars
