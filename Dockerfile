@@ -21,6 +21,8 @@ RUN echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_co
 RUN mkdir -p /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension && \
     echo '{"theme": "JupyterLab Dark"}' > /root/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
 
+RUN apt-get update && apt-get install -y graphviz
+
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
