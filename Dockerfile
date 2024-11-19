@@ -11,7 +11,7 @@ COPY ./notebooks/ ./notebooks/
 
 
 # Puerto de jupyter
-EXPOSE 8888 8787 8889 8881 8880
+EXPOSE 8888 8787 8880 8881 8882 8883 8889
 
 # Configurar Jupyter Lab para aceptar conexiones desde cualquier IP
 RUN jupyter notebook --generate-config
