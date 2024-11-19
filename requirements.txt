@@ -6,3 +6,6 @@ jupyterlab
 notebook
 mimesis
 graphviz
+distributed
+polars
+dask-labextension

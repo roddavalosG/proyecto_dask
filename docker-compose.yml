@@ -3,5 +3,9 @@ services:
     build: .
     ports:
       - "8888:8888"
+      - "8787:8787"
+      - "8889:8889"
+      - "8881:8881"
+      - "8880:8880"
     volumes:
       - ./notebooks:/app/notebooks
